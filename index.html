@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <main>
+        <div class="section-1">
+            <div class="current-weather">
+                <form class="current-weather__search-form">
+                    <div class="search-wrapper">
+                        <!-- <img src="search.svg" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" />
+                        </svg>
+                        <input class="search-input" type="text" placeholder="search for places...">
+                    </div>
+            
+                </form>
+            
+                <div class="current-weather__place-info">
+                    <h2>Noida</h2>
+                    <h3>Uttar Pradesh / India</h3>
+                </div>
+
+                <div class="current-weather__general-info">
+                        <div class="temprature-info">
+                            <span class="temprature">12<sup>°C</sup></span>
+                            <img class="weather-image" src="weather.svg" alt="">
+                        </div>
+
+                        <div class="weather-status">
+                            <div class="circle"></div>
+                            <p>Partly Cloud</p>
+                        </div>
+
+                        <div class="current-date">
+                            <p>Wednesday, March 31, 2021</p>
+                        </div>
+                </div>
+
+
+                <div class="current-weather__other-info">
+                    <div class="realfeel card">
+                        <div class="value">33</div>
+                        <div class="label">RealFeel</div>
+                    </div>
+
+                    <div class="humidity card">
+                        <div class="value">19</div>
+                        <div class="label">Humidity</div>
+                    </div>
+
+                    <div class="pressure card">
+                        <div class="value">1002</div>
+                        <div class="label">Pressure</div>
+                    </div>
+
+                    <div class="uv-index card">
+                        <div class="value">8</div>
+                        <div class="label">UV-Index</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="aqi-info">
+                <h2>Air Quality Index</h2>
+                <div class="bar"></div>
+
+                <div class="aqi-info__wrapper">
+                    <div class="aqi-status">
+                        140
+                    </div>
+                    <div class="aqi-message">
+                        Unhealthy for Sensitive Groups
+                    </div>
+                </div>
+
+                <div class="aqi-info__other">
+                    <div class="circular-card">
+                        <div class="circular-card__content">
+                            <p class="pm2.5">42</p>
+                            <span>pm2.5</span> 
+                        </div>
+                       
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-card__content">
+                            <p class="pm10">84</p>
+                            <span >pm10</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-card__content">
+                            <p class="NO2">7</p>
+                            <span >NO2</span>
+                        </div>  
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-card__content">
+                            <p class="SO2">19</p>
+                            <span >SO2</span>
+                        </div>
+                   
+                    </div>
+
+                    <div class="circular-card">
+                        <div class="circular-card__content">
+                            <p class="O3">194</p>
+                            <span>O3</span>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <div class="wind-info">
+                <h2>Wind Info</h2>
+                <div class="bar"></div>
+            
+                <ul class="wind-info__list">
+                    <li class="wind-info__list-item">
+                        <span class="label">
+                            Direction
+                        </span>
+                        <p class="direction-status">
+                            WNW
+                        </p>
+                    </li>
+                    <li class="wind-info__list-item">
+                        <span class="label">
+                            Degree
+                        </span>
+                        <p class="degree-status">
+                            298
+                        </p>
+                    </li>
+                    <li class="wind-info__list-item">
+                        <span class="label">
+                            Speed
+                        </span>
+                        <p class="speed-status">
+                            11 KM/H
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="astro-info">
+                <h2>Astro</h2>
+                <div class="bar"></div>
+                <ul class="astro-info__list">
+                    <li class="astro-info__list-item">
+                        <div class="list-item-wrapper">
+                            <span class="astro-info__list-item-label">
+                                Sunrise Time
+                            </span>
+                            <p class="sunrise-status astro-info__list-item-value">
+                                06:00 AM
+                            </p>
+                        </div>
+        
+
+                        <figure class="astro-info__list-icon">
+                            <img src="sunset.svg" alt="sunset">
+                        </figure>
+                    </li>
+                    <li class="astro-info__list-item ">
+                        <div class="list-item-wrapper">
+                            <span class="astro-info__list-item-label">
+                                Sunset Time
+                            </span>
+                            <p class="sunset-status astro-info__list-item-value">
+                                06:00 AM
+                            </p>
+                        </div>
+
+                        <figure class="astro-info__list-icon">
+                        <img src="sunrise.svg" alt="sunrise">
+                    </figure>
+                    </li>
+                    <li class="astro-info__list-item">
+                        <div class="list-item-wrapper">
+                            <span class="astro-info__list-item-label">
+                                Moonrise Time
+                            </span>
+                            <p class="moonrise-status astro-info__list-item-value">
+                                06:00 AM
+                            </p>
+                        </div>
+                        
+                        <figure class="astro-info__list-icon">
+                        <img src="moonrise.svg" alt="moonrise">
+                    </figure>
+                    </li>
+                    <li class="astro-info__list-item">
+                        <div class="list-item-wrapper">
+                            <span class="astro-info__list-item-label">
+                                Monnset Time
+                            </span>
+
+                            <p class="moonset-status astro-info__list-item-value">
+                                06:00 AM
+                            </p>
+                        </div>
+                        
+                        <figure class="astro-info__list-icon">
+                        <img src="moonset.svg" alt="moonset">
+                    </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+        
+
+    </main>
+</body>
+</html>

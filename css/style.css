@@ -1,0 +1,284 @@
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  color: #242427;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.current-weather__search-form {
+  padding: 2rem 0;
+}
+.current-weather__search-form .search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.current-weather__search-form .search-wrapper .search-input {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  width: 100%;
+  padding: 1rem 6rem;
+  background: #ececf7;
+  border-radius: 20px;
+}
+.current-weather__search-form .search-wrapper svg {
+  position: absolute;
+  margin-left: 2rem;
+  fill: #444352;
+}
+
+.section-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section-1 .current-weather {
+  width: 90vw;
+  margin: 0 auto;
+}
+.section-1 .current-weather .current-weather__place-info {
+  padding: 0 1rem;
+}
+.section-1 .current-weather .current-weather__place-info h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 55px;
+}
+.section-1 .current-weather .current-weather__place-info h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.temprature-info {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.temprature-info span {
+  font-size: 6rem;
+  font-weight: 500;
+}
+.temprature-info img {
+  width: 14rem;
+  height: 14rem;
+}
+
+.weather-status {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.weather-status .circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #9ad7d7;
+  margin-right: 1rem;
+}
+
+.current-date {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #7b7b82;
+}
+
+.current-weather__other-info {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+.current-weather__other-info .card {
+  width: 40%;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 14px;
+}
+.current-weather__other-info .card .value {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.current-weather__other-info .card .label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.current-weather__other-info .realfeel {
+  background: #ddd8fc;
+}
+.current-weather__other-info .pressure {
+  background: #e9def2;
+}
+.current-weather__other-info .uv-index {
+  background: #e1def2;
+}
+.current-weather__other-info .humidity {
+  background: #f2e7de;
+}
+
+.section-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aqi-info,
+.wind-info,
+.astro-info {
+  width: 90vw;
+  margin: 40px auto;
+  padding: 0 1rem;
+}
+.aqi-info h2,
+.wind-info h2,
+.astro-info h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.aqi-info .bar,
+.wind-info .bar,
+.astro-info .bar {
+  width: 40%;
+  height: 8px;
+  background: #676df4;
+  border-radius: 13px;
+  margin: 5px 0 40px 0;
+}
+
+.aqi-info__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+}
+.aqi-info__wrapper .aqi-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 5px solid #676df4;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f9861c;
+  z-index: 10;
+  background: #ffffff;
+}
+.aqi-info__wrapper .aqi-message {
+  padding: 3rem;
+  font-weight: 500;
+  font-size: 2rem;
+  position: relative;
+  color: #413c3c;
+  text-align: center;
+}
+.aqi-info__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: rgba(103, 109, 244, 0.1);
+  border-radius: 16px;
+  bottom: 0;
+}
+
+.aqi-info__other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.aqi-info__other .circular-card {
+  margin: 2rem;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.aqi-info__other .circular-card p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.aqi-info__other .circular-card span {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.aqi-info__other .circular-card:nth-child(1) {
+  background: #ddd8fc;
+}
+.aqi-info__other .circular-card:nth-child(2) {
+  background: #f2e7de;
+}
+.aqi-info__other .circular-card:nth-child(3) {
+  background: #e9def2;
+}
+.aqi-info__other .circular-card:nth-child(4) {
+  background: #e1def2;
+}
+.aqi-info__other .circular-card:nth-child(5) {
+  background: #deebf2;
+}
+
+.wind-info__list .wind-info__list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin-top: 2.2rem;
+  background: rgba(103, 109, 244, 0.31);
+}
+
+.astro-info__list {
+  list-style: none;
+}
+.astro-info__list .astro-info__list-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: #e8eff9;
+  border-radius: 13px;
+  padding: 1.5rem 3rem;
+}
+.astro-info__list .astro-info__list-item:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.astro-info__list .list-item-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.astro-info__list .list-item-wrapper .astro-info__list-item-value {
+  font-size: 1.3rem;
+  color: #3f3838;
+  font-weight: 500;
+}
+.astro-info__list .list-item-wrapper .astro-info__list-item-label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
