@@ -8,38 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
     <title>Weather</title>
 </head>
 <body>
+    
     <main>
+        <div class="loader-wrapper loader-active">
+            <div class="loader"></div>
+        </div>
         <div class="section-1">
             <div class="current-weather">
-                <form class="current-weather__search-form">
+                <form class="current-weather__search-form" onsubmit="city">
                     <div class="search-wrapper">
                         <!-- <img src="search.svg" alt=""> -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path
                                 d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" />
                         </svg>
-                        <input class="search-input" type="text" placeholder="search for places...">
+                        <input class="search-input " id="weather-search" type="text" placeholder="search for places...">
                     </div>
             
                 </form>
             
                 <div class="current-weather__place-info">
-                    <h2>Noida</h2>
-                    <h3>Uttar Pradesh / India</h3>
+                    <h2 id="city">Noida</h2>
+                    <h3><span id="region">Uttar Pradesh</span> / <span id="country">India</span> </h3>
                 </div>
 
                 <div class="current-weather__general-info">
                         <div class="temprature-info">
-                            <span class="temprature">12<sup>°C</sup></span>
+                            <span class="temprature" ><span id="temperature">12</span><sup>°C</sup></span>
                             <img class="weather-image" src="weather.svg" alt="">
                         </div>
 
                         <div class="weather-status">
                             <div class="circle"></div>
-                            <p>Partly Cloud</p>
+                            <p id="weather-description">Partly Cloud</p>
                         </div>
 
                         <div class="current-date">
@@ -50,22 +55,22 @@
 
                 <div class="current-weather__other-info">
                     <div class="realfeel card">
-                        <div class="value">33</div>
+                        <div class="value" id="feelslike">33</div>
                         <div class="label">RealFeel</div>
                     </div>
 
                     <div class="humidity card">
-                        <div class="value">19</div>
+                        <div class="value" id="humidity">19</div>
                         <div class="label">Humidity</div>
                     </div>
 
                     <div class="pressure card">
-                        <div class="value">1002</div>
+                        <div class="value" id="pressure">1002</div>
                         <div class="label">Pressure</div>
                     </div>
 
                     <div class="uv-index card">
-                        <div class="value">8</div>
+                        <div class="value" id="uv-index">8</div>
                         <div class="label">UV-Index</div>
                     </div>
                 </div>
@@ -77,10 +82,10 @@
                 <div class="bar"></div>
 
                 <div class="aqi-info__wrapper">
-                    <div class="aqi-status">
+                    <div class="aqi-status" id="aqi-value">
                         140
                     </div>
-                    <div class="aqi-message">
+                    <div class="aqi-message" id="healthMessage">
                         Unhealthy for Sensitive Groups
                     </div>
                 </div>
@@ -88,7 +93,7 @@
                 <div class="aqi-info__other">
                     <div class="circular-card">
                         <div class="circular-card__content">
-                            <p class="pm2.5">42</p>
+                            <p id="pm2_5" >42</p>
                             <span>pm2.5</span> 
                         </div>
                        
@@ -96,7 +101,7 @@
 
                     <div class="circular-card">
                         <div class="circular-card__content">
-                            <p class="pm10">84</p>
+                            <p id="pm10" >84</p>
                             <span >pm10</span>
                         </div>
                         
@@ -104,14 +109,14 @@
 
                     <div class="circular-card">
                         <div class="circular-card__content">
-                            <p class="NO2">7</p>
+                            <p id="no2">7</p>
                             <span >NO2</span>
                         </div>  
                     </div>
 
                     <div class="circular-card">
                         <div class="circular-card__content">
-                            <p class="SO2">19</p>
+                            <p id="so2">19</p>
                             <span >SO2</span>
                         </div>
                    
@@ -119,7 +124,7 @@
 
                     <div class="circular-card">
                         <div class="circular-card__content">
-                            <p class="O3">194</p>
+                            <p id="o3">194</p>
                             <span>O3</span>
                         </div>               
                     </div>
@@ -164,10 +169,10 @@
                 <ul class="astro-info__list">
                     <li class="astro-info__list-item">
                         <div class="list-item-wrapper">
-                            <span class="astro-info__list-item-label">
+                            <span class="astro-info__list-item-label" >
                                 Sunrise Time
                             </span>
-                            <p class="sunrise-status astro-info__list-item-value">
+                            <p class="sunrise-status astro-info__list-item-value" id="sunrise">
                                 06:00 AM
                             </p>
                         </div>
@@ -180,9 +185,9 @@
                     <li class="astro-info__list-item ">
                         <div class="list-item-wrapper">
                             <span class="astro-info__list-item-label">
-                                Sunset Time
+                                Sunset 
                             </span>
-                            <p class="sunset-status astro-info__list-item-value">
+                            <p class="sunset-status astro-info__list-item-value" id="sunset">
                                 06:00 AM
                             </p>
                         </div>
@@ -194,9 +199,9 @@
                     <li class="astro-info__list-item">
                         <div class="list-item-wrapper">
                             <span class="astro-info__list-item-label">
-                                Moonrise Time
+                                Moonrise 
                             </span>
-                            <p class="moonrise-status astro-info__list-item-value">
+                            <p class="moonrise-status astro-info__list-item-value" id="moonrise">
                                 06:00 AM
                             </p>
                         </div>
@@ -208,15 +213,15 @@
                     <li class="astro-info__list-item">
                         <div class="list-item-wrapper">
                             <span class="astro-info__list-item-label">
-                                Monnset Time
+                                Moonset 
                             </span>
 
-                            <p class="moonset-status astro-info__list-item-value">
+                            <p class="moonset-status astro-info__list-item-value" id="moonset">
                                 06:00 AM
                             </p>
                         </div>
                         
-                        <figure class="astro-info__list-icon">
+                    <figure class="astro-info__list-icon">
                         <img src="moonset.svg" alt="moonset">
                     </figure>
                     </li>
